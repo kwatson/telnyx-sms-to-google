@@ -3,4 +3,4 @@
 tel=$1
 msg=$2
 
-curl -X POST -d "{\"text\": \"*$tel*\n$msg\"}" $HOOKURL
+curl -H 'Content-Type': 'application/json; charset=UTF-8' -X POST -d "{\"text\": \"*$tel*: $msg\"}" $HOOKURL
